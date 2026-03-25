@@ -14,7 +14,8 @@ matplotlib>=3.7.0
 jupyter>=1.0.0
 
 # Introduccion visual (unidades iniciales)
-py5>=0.10.0
+# Nota: py5 requiere Java. Ver https://py5coding.org/content/install.html
+py5
 
 # Utilidades
 scipy>=1.11.0
