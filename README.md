@@ -15,7 +15,7 @@
 
 ## Qué es este repositorio
 
-Este repositorio contiene el material de laboratorio de la materia. El material se organiza en carpetas numeradas (`001/`, `002/`, `003/`, ...) que se publican semana a semana a medida que avanza la cursada.
+Este repositorio contiene el material de laboratorio de la materia. El material se organiza en carpetas numeradas y tituladas (`001 - ...`, `002 - ...`, `003 - ...`, `004 - ...`) que se publican y actualizan a medida que avanza la cursada.
 
 Cada carpeta corresponde a una unidad temática y contiene notebooks (`.ipynb`) y scripts (`.py`) para trabajar en clase y fuera de ella.
 
@@ -54,7 +54,7 @@ Antes de arrancar, asegurate de tener instalado en tu máquina:
    - Instalá la extensión **Python** desde el marketplace de VS Code
    - Instalá la extensión **Jupyter** para trabajar con notebooks
 
-**Alternativa si no podés instalar nada:** Usá [Google Colab](https://colab.research.google.com) directamente. Los notebooks de este repositorio están preparados para ejecutarse en la nube.
+**Alternativa si no podés instalar nada:** Usá [Google Colab](https://colab.research.google.com) directamente. Para los notebooks que usan imágenes locales, asegurate de subir también la carpeta `Imagenes/` correspondiente o de montar el repositorio completo.
 
 ---
 
@@ -139,37 +139,46 @@ ifts24-lab-pdi-2026/
 ├── requirements.txt             <- Dependencias del entorno
 ├── .gitignore                   <- Archivos ignorados por git
 │
-├── 001/                         <- Unidad 1: Introducción con py5
-│   ├── 000_intro_py5.py
-│   ├── 001_basico.py
-│   ├── 001b_basico_HSV.py
-│   ├── 002_info.py
-│   ├── 003_RGB.py
-│   ├── 004_HSV.py
-│   ├── 005_upload_img.py
-│   ├── 006_pixeles.py
-│   ├── 007_pixeles.py
-│   ├── 008_filtro.py
-│   ├── 009_mouse.py
-│   ├── 009b_mouse.py
-│   ├── 009c_mouse.py
-│   ├── 010_filtro.py
-│   ├── 011_filtro.py
-│   ├── 012_filtro.py
-│   ├── 013_filtro.py
-│   ├── 014_filtro.py
-│   ├── 015_dibujo.py
-│   ├── img/                     <- Imágenes de ejemplo
-│   ├── save/                    <- Carpeta para guardar resultados
-│   └── info.txt                 <- Referencia rápida de py5
+├── 001 - py5/                   <- Unidad inicial con ejercicios py5
+│   ├── *.py
+│   ├── img/
+│   └── save/
 │
-├── 002/                         <- Unidad 2: Fundamentos de la Imagen Digital
-│   ├── 00_setup_colab.ipynb     <- Configuración para Google Colab
-│   ├── 02a_fundamentos_teoria_colab.ipynb      <- Teoría (Colab)
-│   ├── 02b_fundamentos_practica_local.ipynb    <- Práctica (local)
-│   └── 02c_laboratorio_fundamentos.ipynb       <- Laboratorio
+├── 002 - py5/                   <- Fundamentos teóricos y laboratorio con py5
+│   ├── 00_setup_colab.ipynb
+│   ├── 02a_fundamentos_teoria_colab.ipynb
+│   ├── 02a_fundamentos_teoria_local.ipynb
+│   ├── 02b_fundamentos_practica_local.ipynb
+│   └── 02c_laboratorio_fundamentos.ipynb
 │
-└── ...                          <- Unidades siguientes (se publican semanalmente)
+├── 003 - librerias_fundamentos_pdi/   <- NumPy, OpenCV y prácticas guiadas de PDI
+│   ├── 001 - entorno y librerias.ipynb
+│   ├── 002 - imagenes en color y canales.ipynb
+│   ├── ...
+│   └── 008 - actividad integradora - segmentacion por color.ipynb
+│
+├── 004 - openCV/                <- Bloque OpenCV reorganizado en secuencia plana
+│   ├── 001 - introduccion a opencv y espacios de color.ipynb
+│   ├── 002 - formatos de archivos de imagen.ipynb
+│   ├── 003 - mejora de imagen y ecualizacion basica.ipynb
+│   ├── 004 - comparacion de estrategias de ecualizacion.ipynb
+│   ├── 004b - operaciones basicas con imagenes.ipynb
+│   ├── 005 - transformaciones geometricas y cambio de perspectiva.ipynb
+│   ├── 006 - operaciones graficas y anotacion visual.ipynb
+│   ├── 006b - filtros de suavizado y reduccion de ruido.ipynb
+│   ├── 006b2 - umbralizacion global, Otsu y adaptive threshold.ipynb
+│   ├── 006c - morfologia matematica para limpieza de mascaras.ipynb
+│   ├── 006d - restauracion y algoritmos de inpainting.ipynb
+│   ├── 007 - deteccion de contornos.ipynb
+│   ├── 008 - propiedades geometricas de contornos.ipynb
+│   ├── 009 - coincidencia por plantilla.ipynb
+│   ├── 010 - deteccion de rostros con haar.ipynb
+│   ├── Utilidades_y_Plantillas.ipynb     <- Caja de herramientas reutilizable para la unidad y el TPI
+│   └── Imagenes/
+│
+└── 005 - TFI_1/                 <- Trabajo final integrador de mejora y restauracion
+    ├── TFI_1 - mejora y restauracion de imagenes.ipynb
+    └── TFI_1_Consigna_y_Rubrica.md
 ```
 
 ---
@@ -188,7 +197,8 @@ ifts24-lab-pdi-2026/
 
 1. Andá a [Google Colab](https://colab.research.google.com)
 2. Subí el notebook `.ipynb` que querés ejecutar
-3. Los notebooks incluyen la configuración inicial para instalar dependencias en Colab
+3. Si el cuaderno usa recursos locales, subí también la carpeta `Imagenes/` de esa unidad
+4. Los notebooks pueden requerir ajustar rutas según cómo quede montado el material en Colab
 
 ---
 
@@ -213,7 +223,7 @@ pip install -r requirements.txt
 Verificá que:
 1. Las imágenes estén en la carpeta correspondiente
 2. Estés ejecutando el script desde la carpeta correcta
-3. Usás rutas relativas: `img/mi_imagen.jpg` en lugar de rutas absolutas
+3. Usás rutas relativas: `img/mi_imagen.jpg` o `Imagenes/mi_imagen.jpg` en lugar de rutas absolutas
 
 ### py5 no abre la ventana o no muestra la imagen
 En algunos sistemas operativos, py5 requiere un backend gráfico adicional. Instalá glfw:
