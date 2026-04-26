@@ -4,6 +4,53 @@ Este documento traduce la consigna y la rubrica a un plan operativo para trabaja
 
 ---
 
+## 0) Como identificar correctamente los tipos de imagen pedidos
+
+La confusion es normal: en la consigna, “medio grafico” se refiere a imagenes que vienen de un **material impreso o publicado** (revista, diario, folleto, afiche, fotocopia, pagina escaneada), no a una foto cualquiera de camara.
+
+### 2) Imagen de medio grafico color
+
+Es una imagen de origen grafico/impreso que **conserva informacion de color**.
+
+Ejemplos validos:
+
+- foto de una pagina de revista a color;
+- etiqueta o folleto impreso a color;
+- afiche color fotografiado o escaneado;
+- pagina de libro con ilustraciones a color.
+
+Pistas visuales tipicas:
+
+- tramas de impresion (puntitos CMYK);
+- deformacion de perspectiva por foto con celular;
+- dominante de luz (amarillenta/azulada);
+- colores “lavados” o desbalanceados por captura.
+
+### 3) Imagen de medio grafico blanco/negro
+
+Es una imagen de origen grafico/impreso donde el objetivo principal suele ser la **legibilidad en tonos de gris o binario** (texto, lineas, formularios, fotocopias).
+
+Ejemplos validos:
+
+- hoja de apuntes/fotocopia en blanco y negro;
+- pagina de diario con texto y poco contraste;
+- documento escaneado con fondo gris;
+- formulario impreso con ruido o sombras.
+
+Pistas visuales tipicas:
+
+- fondo sucio/grisaceo;
+- sombras no uniformes;
+- trazos cortados o letras poco legibles;
+- ruido de escaneo o compresion.
+
+### Regla practica para decidir rapido
+
+- Si el problema principal es **color/cromaticidad/perspectiva de pieza color** → caso 2 (medio grafico color).
+- Si el problema principal es **legibilidad de texto o trazos en escala de grises** → caso 3 (medio grafico blanco/negro).
+
+---
+
 ## 1) Que significa “procedimiento” en este TFI
 
 En este trabajo, un **procedimiento** es una estrategia reproducible para atacar un problema visual, definida por:
@@ -242,4 +289,3 @@ Cuando elijas la primera imagen, avanzamos asi:
 3. Ejecutas, compartis resultados.
 4. Ajustamos parametros con criterio.
 5. Redactamos justificacion final lista para el notebook.
-
