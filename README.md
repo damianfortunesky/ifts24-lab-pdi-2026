@@ -19,6 +19,8 @@ Este repositorio contiene el material de laboratorio de la materia. El material 
 
 Cada carpeta corresponde a una unidad temática y contiene notebooks (`.ipynb`) y scripts (`.py`) para trabajar en clase y fuera de ella.
 
+**Guía de estudio teórica:** para repasar de manera exhaustiva los contenidos de la materia, consultá [`GUIA_ESTUDIO_TEORICA_PDI.md`](GUIA_ESTUDIO_TEORICA_PDI.md).
+
 **Librerías principales del curso:**
 - **OpenCV (cv2):** Procesamiento de imágenes y visión computacional
 - **NumPy:** Manipulación de matrices y arrays
