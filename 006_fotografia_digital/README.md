@@ -30,6 +30,7 @@ Completar una entrega que demuestre **intención visual, decisión técnica, lec
 La resolución técnica de **Cámara oscura y procesamiento digital** está en:
 
 - `parte_1_camara_oscura.md`: guía breve con nombres de archivos, explicación y justificación.
+- `analisis_parte_1_camara_oscura.md`: conclusiones, fundamentos y estructura sugerida de diapositivas para defender los resultados de la Parte 1.
 - `codigo/ecualizacion_hsv.py`: script que procesa `img_camara_oscura_2` en HSV, ecualiza solo el canal `V` y genera resultados para la presentación.
 
 Uso recomendado desde la raíz del repositorio:
