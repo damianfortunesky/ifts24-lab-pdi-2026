@@ -24,6 +24,22 @@ Completar una entrega que demuestre **intención visual, decisión técnica, lec
     └── referencias_opcionales/
 ```
 
+
+## Resolución de la Parte 1
+
+La resolución técnica de **Cámara oscura y procesamiento digital** está en:
+
+- `parte_1_camara_oscura.md`: guía breve con nombres de archivos, explicación y justificación.
+- `codigo/ecualizacion_hsv.py`: script que procesa `img_camara_oscura_2` en HSV, ecualiza solo el canal `V` y genera resultados para la presentación.
+
+Uso recomendado desde la raíz del repositorio:
+
+```bash
+python "006_fotografia_digital/codigo/ecualizacion_hsv.py"
+```
+
+Antes de ejecutarlo, guardar en `imagenes/originales/` las fotos `camara_oscura_1`, `camara_oscura_2` y la captura a procesar `img_camara_oscura_2` con extensión `.jpg`, `.jpeg`, `.png`, `.webp`, `.bmp`, `.tif` o `.tiff`.
+
 ## Pasos para completar el trabajo práctico con éxito
 
 ### 1. Preparar materiales y organización
