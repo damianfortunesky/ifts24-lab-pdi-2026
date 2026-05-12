@@ -21,9 +21,6 @@ Nombres esperados para la Parte 1:
 Ejemplo de uso desde la raíz del repositorio:
 python "006_fotografia_digital/codigo/ecualizacion_hsv.py"
 
-Si el archivo tiene otro nombre o extensión:
-python "006_fotografia_digital/codigo/ecualizacion_hsv.py" \
-  --entrada "006_fotografia_digital/imagenes/originales/img_camara_oscura_2.jpg"
 """
 
 from __future__ import annotations
