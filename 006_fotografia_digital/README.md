@@ -41,6 +41,23 @@ python "006_fotografia_digital/codigo/ecualizacion_hsv.py"
 
 Antes de ejecutarlo, guardar en `imagenes/originales/` las fotos `camara_oscura_1`, `camara_oscura_2` y la captura a procesar `img_camara_oscura_2` con extensión `.jpg`, `.jpeg`, `.png`, `.webp`, `.bmp`, `.tif` o `.tiff`.
 
+
+## Resolución de la Parte 2
+
+La resolución de **Composición y lenguaje visual** para las diapositivas 4, 5 y 6 está en:
+
+- `parte_2_composicion_lenguaje_visual.md`: guía de armado, decisiones compositivas y textos sugeridos para las diapositivas.
+- `codigo/composicion_parte_2.py`: script que procesa `img_p2_0*` desde `imagenes/originales/` y genera recursos para simplicidad visual, reencuadre y punto de vista.
+
+Uso recomendado desde la raíz del repositorio:
+
+```bash
+python "006_fotografia_digital/codigo/composicion_parte_2.py"
+```
+
+Antes de ejecutarlo, guardar en `imagenes/originales/` las fotos de la serie como `img_p2_01.jpg`, `img_p2_02.jpg`, `img_p2_03.jpg`, etc. Esta resolución no incluye el punto 7, **Fotografía basada en la luz**, porque requiere una toma nueva específica.
+
+
 ## Pasos para completar el trabajo práctico con éxito
 
 ### 1. Preparar materiales y organización
