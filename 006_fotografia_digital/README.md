@@ -1,212 +1,519 @@
-# Trabajo Práctico 006 — Fotografía Digital
+# README.md
 
-## Objetivo del trabajo
+# Parte 1 — Cámara oscura y procesamiento digital
 
-Completar una entrega que demuestre **intención visual, decisión técnica, lectura compositiva y postproceso consciente**. La entrega principal será `presentacion.pdf`, acompañada por fotografías originales/procesadas, descartes y scripts usados para el procesamiento digital.
+## Objetivo de la actividad
 
-## Estructura esperada de la carpeta
+El objetivo de esta actividad fue:
 
-```text
-006_fotografia_digital/
-├── README.md
-├── GUIA.txt
-├── Introduccion a la fotografia.pdf
-├── presentacion.pdf
-├── imagenes/
-│   ├── originales/
-│   ├── procesadas/
-│   └── descartes/
-├── codigo/
-│   ├── ecualizacion_hsv.py
-│   ├── escala_grises.py
-│   └── otros_scripts.py
-└── recursos/
-    └── referencias_opcionales/
-```
+* construir una cámara oscura artesanal,
+* capturar una imagen real utilizando el dispositivo,
+* aplicar procesamiento digital básico,
+* analizar el comportamiento de la imagen y sus limitaciones físicas.
 
+---
 
-## Resolución de la Parte 1
+# 1. Cámara oscura
 
-La resolución técnica de **Cámara oscura y procesamiento digital** está en:
+## Principio óptico
 
-- `parte_1_camara_oscura.md`: guía breve con nombres de archivos, explicación y justificación.
-- `analisis_parte_1_camara_oscura.md`: conclusiones, fundamentos y estructura sugerida de diapositivas para defender los resultados de la Parte 1.
-- `codigo/ecualizacion_hsv.py`: script que procesa `img_camara_oscura_2` en HSV, ecualiza solo el canal `V` y genera resultados para la presentación.
+La cámara oscura funciona mediante la propagación rectilínea de la luz.
 
-Uso recomendado desde la raíz del repositorio:
+La luz atraviesa un pequeño orificio y proyecta una imagen invertida sobre una superficie interna.
 
-```bash
-python "006_fotografia_digital/codigo/ecualizacion_hsv.py"
-```
+---
 
-Antes de ejecutarlo, guardar en `imagenes/originales/` las fotos `camara_oscura_1`, `camara_oscura_2` y la captura a procesar `img_camara_oscura_2` con extensión `.jpg`, `.jpeg`, `.png`, `.webp`, `.bmp`, `.tif` o `.tiff`.
+## Conceptos observados
 
+### Propagación rectilínea
 
-## Resolución de la Parte 2
+La luz viaja en línea recta desde la escena hasta el plano de proyección.
 
-La resolución de **Composición y lenguaje visual** para las diapositivas 4, 5 y 6 está en:
+### Imagen invertida
 
-- `parte_2_composicion_lenguaje_visual.md`: guía de armado, decisiones compositivas y textos sugeridos para las diapositivas.
-- `codigo/composicion_parte_2.py`: script que procesa `img_p2_0*` desde `imagenes/originales/` y genera recursos para simplicidad visual, reencuadre y punto de vista.
+La proyección aparece invertida vertical y horizontalmente debido a la geometría del sistema óptico.
 
-Uso recomendado desde la raíz del repositorio:
+### Plano de imagen
 
-```bash
-python "006_fotografia_digital/codigo/composicion_parte_2.py"
-```
+La superficie interna donde se proyecta la escena actúa como plano de imagen.
 
-Antes de ejecutarlo, guardar en `imagenes/originales/` las fotos de la serie como `img_p2_01.jpg`, `img_p2_02.jpg`, `img_p2_03.jpg`, etc. Esta resolución no incluye el punto 7, **Fotografía basada en la luz**, porque requiere una toma nueva específica.
+### Apertura y nitidez
 
+El tamaño del orificio afecta directamente la nitidez:
 
-## Pasos para completar el trabajo práctico con éxito
+* agujero grande → más luz pero menos definición,
+* agujero pequeño → mayor nitidez pero menos luminosidad.
 
-### 1. Preparar materiales y organización
+---
 
-- [ ] Leer completa la guía del trabajo práctico (`GUIA.txt`).
-- [ ] Mantener los archivos ordenados en la estructura solicitada.
-- [ ] Guardar siempre las fotografías sin editar en `imagenes/originales/`.
-- [ ] Guardar versiones editadas o procesadas en `imagenes/procesadas/`.
-- [ ] Guardar intentos no elegidos en `imagenes/descartes/`, porque serán necesarios para la selección crítica.
-- [ ] No usar imágenes generadas con IA, imágenes descargadas de internet, reemplazo de contenido ni fotomontajes complejos.
+# 2. Captura de imagen
 
-### 2. Construir y registrar la cámara oscura
+## Resultado obtenido
 
-- [ ] Construir una cámara oscura o dispositivo experimental simple.
-- [ ] Fotografiar el dispositivo construido.
-- [ ] Preparar un esquema sencillo que explique su funcionamiento.
-- [ ] Explicar en la presentación:
-  - propagación rectilínea de la luz;
-  - proyección invertida;
-  - plano de imagen;
-  - relación entre apertura y nitidez.
+La imagen capturada presenta:
 
-### 3. Capturar una imagen con cámara oscura y procesarla en HSV
+* bajo contraste,
+* desenfoque óptico,
+* ruido,
+* iluminación irregular,
+* pérdida de detalle fino.
 
-- [ ] Capturar una imagen usando la cámara oscura.
-- [ ] Guardar la imagen original en `imagenes/originales/`.
-- [ ] Crear `codigo/ecualizacion_hsv.py` para:
-  - leer la imagen original;
-  - convertir de BGR/RGB a HSV;
-  - separar los canales H, S y V;
-  - ecualizar únicamente el canal V;
-  - recomponer la imagen;
-  - guardar el resultado en `imagenes/procesadas/`;
-  - generar histogramas antes/después.
-- [ ] En la presentación, comparar original vs. ecualizada y responder:
-  - qué mejoró visualmente;
-  - qué información se perdió;
-  - qué limitaciones tuvo la cámara oscura;
-  - por qué conviene ecualizar V y no RGB directamente.
+Estas características son típicas de una cámara oscura artesanal.
 
-### 4. Producir una fotografía de simplicidad visual
+---
 
-- [ ] Tomar una fotografía donde el sujeto principal sea claro.
-- [ ] Aplicar al menos una estrategia compositiva:
-  - separación sujeto/fondo;
-  - reducción de ruido visual;
-  - profundidad de campo;
-  - espacio negativo;
-  - acercamiento;
-  - conversión a blanco y negro o escala de grises.
-- [ ] Crear `codigo/escala_grises.py` si se usa conversión a escala de grises.
-- [ ] En la presentación, mostrar imagen original, imagen final y explicar:
-  - qué elementos distraían;
-  - qué se eliminó o simplificó;
-  - cómo cambia la lectura si se usa escala de grises.
+# 3. Procesamiento digital
 
-### 5. Trabajar reencuadres e interpretación
+## Objetivo del procesamiento
 
-- [ ] Tomar una fotografía amplia.
-- [ ] Producir al menos dos recortes distintos: `crop_a` y `crop_b`.
-- [ ] Marcar en la imagen original las regiones recortadas.
-- [ ] Comparar cómo cambia el significado al modificar el encuadre:
-  - qué se vuelve importante;
-  - qué información desaparece;
-  - si cambia el sujeto;
-  - si la imagen se vuelve más narrativa o más abstracta.
+Mejorar la percepción visual de la imagen sin alterar excesivamente la información original.
 
-### 6. Explorar punto de vista y narrativa
+---
 
-- [ ] Elegir un mismo sujeto y fotografiarlo desde dos puntos de vista distintos.
-- [ ] Asegurar que uno de los puntos de vista aporte información contextual nueva.
-- [ ] Comparar en la presentación:
-  - vista A;
-  - vista B;
-  - imagen final elegida;
-  - explicación del cambio narrativo.
+# 4. Conversión a HSV
 
-### 7. Realizar una fotografía basada en la luz
+## ¿Por qué usar HSV?
 
-- [ ] Planificar una toma donde la luz sea el elemento estructural.
-- [ ] Decidir conscientemente:
-  - dirección de la luz;
-  - calidad de la luz;
-  - hora del día;
-  - contraste;
-  - sombras.
-- [ ] Incluir un esquema simple de dirección de luz.
-- [ ] Explicar si la luz revela, esconde, genera textura, volumen o atmósfera.
+La imagen fue convertida desde RGB hacia HSV.
 
-### 8. Seleccionar, descartar y justificar
+HSV separa la información en:
 
-- [ ] Tomar muchas fotografías para cada consigna.
-- [ ] Comparar técnicamente y visualmente las alternativas.
-- [ ] Mover las imágenes no elegidas a `imagenes/descartes/`.
-- [ ] Preparar una diapositiva con miniaturas de descartes, imagen elegida y criterio de selección.
-- [ ] Justificar por qué la imagen final funciona mejor que las descartadas.
+* H → tono/color,
+* S → saturación,
+* V → brillo/luminancia.
 
-### 9. Escribir la reflexión final
+Esto permite modificar únicamente el brillo sin alterar directamente los colores.
 
-Responder brevemente en la presentación:
+---
 
-- [ ] ¿Qué aprendiste sobre mirar?
-- [ ] ¿Qué diferencia hay entre registrar y construir una imagen?
-- [ ] ¿Qué relación encontrás entre óptica, percepción y composición?
-- [ ] ¿Cómo modifica el postproceso la lectura de una fotografía?
+# 5. Separación de canales
 
-### 10. Preparar el anexo técnico
+Se separaron los canales:
 
-- [ ] Incluir fragmentos de código o pseudocódigo.
-- [ ] Incluir histogramas y pruebas de procesamiento.
-- [ ] Mostrar como mínimo:
-  - conversión RGB/BGR ↔ HSV;
-  - separación de canales H, S y V;
-  - ecualización del canal V;
-  - transformación a escala de grises.
+* H (Hue),
+* S (Saturation),
+* V (Value).
 
-### 11. Armar `presentacion.pdf`
+El procesamiento se realizó únicamente sobre el canal V.
 
-La presentación debe funcionar como una **narrativa visual y técnica**, no como una acumulación de imágenes. Estructura sugerida:
+---
 
-1. Portada.
-2. Construcción y registro de la cámara oscura.
-3. Captura con cámara oscura + ecualización HSV.
-4. Fotografía de simplicidad visual.
-5. Reencuadre y reinterpretación.
-6. Punto de vista y construcción narrativa.
-7. Fotografía basada en la luz.
-8. Selección crítica.
-9. Reflexión final.
-10. Anexo técnico.
+# 6. Ecualización del canal V
 
-### 12. Revisión final antes de entregar
+## ¿Qué se hizo?
 
-- [ ] Confirmar que existe `presentacion.pdf` en `006_fotografia_digital/`.
-- [ ] Confirmar que todas las imágenes usadas en la presentación están en el repositorio.
-- [ ] Confirmar que los scripts mencionados están en `codigo/`.
-- [ ] Revisar que cada diapositiva comunique una idea clara.
-- [ ] Verificar que haya comparación entre originales, procesadas y descartes.
-- [ ] Verificar que se expliquen decisiones técnicas y compositivas, no solo resultados estéticos.
-- [ ] Revisar ortografía, nombres, comisión, fecha y título.
-- [ ] Subir la entrega completa al repositorio GitHub.
+Se aplicó ecualización de histograma únicamente sobre el canal V.
 
-## Prioridades de evaluación
+---
 
-Para maximizar el resultado, priorizar:
+## ¿Por qué sobre V y no RGB?
 
-1. Comprensión óptica y cámara oscura.
-2. Composición y lenguaje visual.
-3. Procesamiento HSV correcto y explicado.
-4. Uso consciente de la luz.
-5. Reflexión crítica sobre decisiones, descartes y postproceso.
-6. Organización clara del PDF y del repositorio.
+Ecualizar directamente RGB puede:
+
+* alterar colores,
+* producir artefactos cromáticos,
+* deformar el balance visual.
+
+En cambio, ecualizar V:
+
+* mejora contraste,
+* aumenta visibilidad,
+* conserva mejor los colores originales.
+
+---
+
+# 7. Recomposición de la imagen
+
+Luego de ecualizar el canal V:
+
+* los canales HSV fueron recombinados,
+* la imagen fue convertida nuevamente a RGB/BGR.
+
+---
+
+# 8. Histogramas
+
+## Histograma original
+
+La imagen original presenta:
+
+* rango dinámico reducido,
+* predominio de tonos medios,
+* pocos negros profundos,
+* pocas altas luces reales.
+
+---
+
+## Histograma ecualizado
+
+Luego de la ecualización:
+
+* el rango tonal se expande,
+* mejora la distribución de intensidades,
+* aumenta el contraste visual.
+
+---
+
+# 9. Resultados obtenidos
+
+## Mejoras observadas
+
+### Mejora de contraste
+
+Las zonas oscuras y claras se diferencian mejor.
+
+### Recuperación visual
+
+Aparecen estructuras antes poco visibles.
+
+### Mejor percepción de profundidad
+
+La imagen adquiere mayor separación tonal.
+
+### Conservación de color
+
+Los colores originales se mantienen relativamente estables.
+
+---
+
+# 10. Limitaciones observadas
+
+## Limitaciones físicas de la cámara oscura
+
+### Desenfoque óptico
+
+La ausencia de lentes genera baja nitidez.
+
+### Ruido
+
+La poca iluminación obliga a exposiciones más complejas.
+
+### Sobreexposición
+
+Algunas zonas brillantes se saturan fácilmente.
+
+### Difracción
+
+El pequeño orificio introduce pérdida de detalle.
+
+### Bajo detalle fino
+
+La imagen conserva una apariencia suave y difusa.
+
+---
+
+# 11. Análisis final
+
+El procesamiento aplicado mejora claramente:
+
+* contraste,
+* percepción visual,
+* distribución tonal.
+
+Sin embargo:
+
+* no puede recuperar detalle perdido físicamente,
+* no elimina completamente el blur óptico,
+* ni corrige limitaciones estructurales de la cámara oscura.
+
+El principal límite de calidad proviene de la captura física y no del procesamiento digital.
+
+---
+
+# 12. Conclusión
+
+La actividad permitió comprender:
+
+* fundamentos ópticos de la cámara oscura,
+* comportamiento de imágenes con bajo contraste,
+* uso del espacio HSV,
+* aplicación práctica de ecualización de histograma,
+* interpretación de histogramas,
+* relación entre captura física y procesamiento digital.
+
+La ecualización sobre el canal V permitió mejorar la imagen respetando el objetivo pedagógico de la actividad y manteniendo coherencia con los fundamentos del procesamiento digital de imágenes.
+
+# -------------------------------------------------------------------------------------------------------------------------------------------------------- #
+
+# Parte 2 — Composición y lenguaje visual
+
+---
+
+# 4. Fotografía de simplicidad visual
+
+## Objetivo
+
+Construir una imagen donde el sujeto principal sea claramente identificable.
+
+## Estrategias utilizadas
+
+- acercamiento
+- reducción de ruido visual
+- separación sujeto/fondo
+- conversión a escala de grises
+
+## Explicación compositiva
+
+La imagen original contenía múltiples elementos distractores:
+- silla
+- mesa
+- texturas secundarias
+- espacio vacío excesivo
+
+Se realizó un reencuadre para centrar la atención en el gato y eliminar elementos innecesarios.
+
+La conversión a escala de grises reduce la información cromática y enfatiza:
+- forma
+- contraste
+- textura
+- volumen
+
+## Preguntas guía
+
+### ¿Qué elementos distraían?
+
+La silla, el piso, la mesa y los objetos del fondo.
+
+### ¿Qué se eliminó?
+
+Se eliminó gran parte del entorno mediante crop.
+
+### ¿Cómo cambia la lectura en escala de grises?
+
+La imagen se vuelve más gráfica y centrada en formas y contraste.
+
+---
+
+# 5. Reencuadre y reinterpretación
+
+## Objetivo
+
+Demostrar que cambiar el encuadre modifica el significado de la imagen.
+
+## Explicación
+
+Se partió de una imagen amplia del ambiente.
+
+Se realizaron dos recortes:
+
+### Crop A
+
+Mantiene parte del entorno.
+El sujeto continúa relacionado con el espacio.
+
+### Crop B
+
+Aísla al gato.
+La imagen se vuelve más abstracta y psicológica.
+
+## Preguntas guía
+
+### ¿Qué se vuelve importante después del crop?
+
+El rostro y la postura del sujeto.
+
+### ¿Qué información desaparece?
+
+Contexto espacial y objetos secundarios.
+
+### ¿El sujeto cambia?
+
+Sí.
+Pasa de ser parte de una escena a convertirse en el foco absoluto.
+
+### ¿La imagen se vuelve más narrativa o más abstracta?
+
+El crop cerrado genera una imagen más abstracta e íntima.
+
+---
+
+# 6. Punto de vista y construcción narrativa
+
+## Objetivo
+
+Explorar cómo la posición de la cámara modifica:
+- escala
+- contexto
+- relación emocional
+
+## Explicación
+
+Se fotografió el mismo sujeto desde dos ángulos:
+- frontal
+- cenital
+
+La vista frontal genera cercanía emocional.
+
+La vista cenital genera distancia y vulnerabilidad.
+
+## Preguntas guía
+
+### ¿Qué información aparece desde el nuevo ángulo?
+
+La forma del cuerpo y la relación espacial con el sillón.
+
+### ¿Cómo cambia la percepción del sujeto?
+
+El sujeto parece más pequeño y aislado.
+
+### ¿Qué relación genera la cámara con la escena?
+
+La cámara frontal genera igualdad visual.
+La cenital genera observación externa.
+
+---
+
+# 7. Fotografía basada en la luz
+
+## Objetivo
+
+Usar la luz como elemento estructural de la imagen.
+
+## Estrategia utilizada
+
+- luz lateral
+- alto contraste
+- sombras marcadas
+
+## Explicación
+
+La luz lateral genera:
+- volumen
+- textura
+- dramatismo
+
+Las sombras permiten separar al sujeto del fondo oscuro.
+
+## Preguntas guía
+
+### ¿La luz revela o esconde?
+
+Hace ambas cosas:
+revela volumen y esconde parte del entorno.
+
+### ¿Genera textura?
+
+Sí.
+La manta y el pelaje se vuelven más táctiles.
+
+### ¿Construye atmósfera?
+
+Sí.
+La escena adquiere un tono introspectivo.
+
+### ¿Cómo cambia el volumen?
+
+El contraste lateral aumenta la percepción tridimensional.
+
+---
+
+# Parte 3 — Reflexión y selección
+
+---
+
+# 8. Selección crítica
+
+## Imagen elegida
+
+actividad7_luz_final.jpg
+
+## Explicación
+
+La imagen elegida funciona mejor porque:
+- posee intención visual clara
+- tiene contraste fuerte
+- separa correctamente sujeto y fondo
+- utiliza la luz como elemento compositivo
+
+## Imágenes descartadas
+
+Las imágenes descartadas presentaban:
+- exceso de espacio vacío
+- menor impacto visual
+- iluminación menos controlada
+- menor claridad narrativa
+
+## Decisiones que mejoraron la imagen final
+
+- reencuadre
+- control de luz
+- simplificación compositiva
+- selección crítica
+
+---
+
+# 9. Reflexión final
+
+## ¿Qué aprendiste sobre mirar?
+
+Aprendí que fotografiar implica observar relaciones entre:
+- luz
+- forma
+- encuadre
+- intención
+
+## ¿Qué diferencia hay entre registrar y construir una imagen?
+
+Registrar es capturar una escena.
+Construir implica tomar decisiones visuales conscientes.
+
+## ¿Qué relación encontrás entre óptica, percepción y composición?
+
+La óptica condiciona la luz.
+La percepción organiza visualmente la escena.
+La composición dirige la atención.
+
+## ¿Cómo modifica el postproceso la lectura de una fotografía?
+
+El postproceso puede:
+- enfatizar contraste
+- dirigir la mirada
+- cambiar atmósferas
+- simplificar información visual
+
+---
+
+# 10. Anexo técnico
+
+## Operaciones realizadas
+
+- conversión RGB → HSV
+- ecualización del canal V
+- transformación a escala de grises
+- recorte digital
+- análisis de histograma
+
+## Objetivo técnico
+
+Mejorar:
+- contraste
+- separación visual
+- lectura tonal
+
+## Código utilizado
+
+El procesamiento fue realizado en Python utilizando:
+- OpenCV
+- NumPy
+- Matplotlib
+
+## Procesos incluidos
+
+### Conversión RGB ↔ HSV
+
+Separación de:
+- tono
+- saturación
+- brillo
+
+### Ecualización del canal V
+
+Mejora del contraste lumínico.
+
+### Escala de grises
+
+Simplificación visual basada en luminancia.
+
+### Histogramas
+
+Análisis de distribución tonal de la imagen.
