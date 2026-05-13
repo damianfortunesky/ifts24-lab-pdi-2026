@@ -517,3 +517,18 @@ Simplificación visual basada en luminancia.
 ### Histogramas
 
 Análisis de distribución tonal de la imagen.
+
+---
+
+# Presentación para PPT
+
+Se agregó una presentación breve y editable en Markdown:
+
+- `presentacion_tp6_fotografia_digital.md`
+
+El archivo está pensado como fuente para armar/exportar la presentación en PowerPoint sin subir binarios al repositorio. Esto evita el error de revisión de cambios `Binary files are not supported` en la interfaz web.
+
+La presentación respeta la estructura de la consigna: portada, cámara oscura, captura y ecualización HSV, simplicidad visual, reencuadre, punto de vista, luz, selección crítica, reflexión final, anexo técnico y cierre.
+
+Para convertirla a PPTX se puede abrir el Markdown en un editor de presentaciones compatible con Markdown/Marp o copiar cada bloque separado por `---` a PowerPoint.
+
